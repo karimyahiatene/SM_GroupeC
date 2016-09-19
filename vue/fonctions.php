@@ -2,7 +2,7 @@
 function connectToDatabase(){
     try
       {
-       $pdo = new PDO('mysql:host=localhost;dbname=db_speedymarket; charset=utf8', 'root', '');
+       $pdo = new PDO('mysql:host=localhost;dbname=db_speedymarket; charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
        return $pdo;
       }
     catch(Exception $e)
@@ -21,7 +21,7 @@ function buildMenu($esp, $parent, $menu)
        {
           if(!isset($menu['parents'][$itemId]))
           {
-             $html .= "<li>\n  <a href='index.php?categorie=".$menu['items'][$itemId]['codeC']."'>".$menu['items'][$itemId]['libelleC']."</a>\n</li> \n";
+             $html .= "<li>\n  <a href='index.php?page=categorie&categorie=".$menu['items'][$itemId]['codeC']."'>".$menu['items'][$itemId]['libelleC']."</a>\n</li> \n";
           }
           if(isset($menu['parents'][$itemId]))
           {
@@ -36,11 +36,4 @@ function buildMenu($esp, $parent, $menu)
    return $html;
 }
 
-function add_panier(){
-
-}
-
-function del_panier(){
-  
-}
 ?>

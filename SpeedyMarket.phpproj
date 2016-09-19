@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>SpeedyMarket</Name>
+    <ProjectGuid>{6a45e385-635b-4122-815a-182cd43a8011}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="controleur\accueil.controler.php" />
+    <Compile Include="controleur\categorie.controler.php" />
+    <Compile Include="model\Panier.class.php" />
+    <Compile Include="vue\categorie.view.php" />
+    <Compile Include="vue\gabarit.view.php" />
+    <Compile Include="vue\images\produits\fruits\ananas.jpg" />
+    <Compile Include="vue\images\produits\fruits\banane.jpg" />
+    <Compile Include="vue\images\produits\fruits\cerise.jpg" />
+    <Compile Include="vue\images\produits\fruits\clementine.jpg" />
+    <Compile Include="vue\images\produits\fruits\figue.jpg" />
+    <Compile Include="vue\images\produits\fruits\fraise.jpg" />
+    <Compile Include="vue\images\produits\fruits\kiwi.jpg" />
+    <Compile Include="vue\images\produits\fruits\mangue.jpg" />
+    <Compile Include="vue\images\produits\fruits\melon.jpg" />
+    <Compile Include="vue\images\produits\fruits\orange.jpg" />
+    <Compile Include="vue\images\produits\fruits\pamplemousse.jpg" />
+    <Compile Include="vue\images\produits\fruits\peche.jpg" />
+    <Compile Include="vue\images\produits\fruits\poire.jpg" />
+    <Compile Include="vue\images\produits\fruits\pomme.jpg" />
+    <Compile Include="vue\images\produits\fruits\prune.jpg" />
+    <Compile Include="vue\images\produits\fruits\raisin.jpg" />
+    <Compile Include="vue\images\produits\légumes\ail.jpg" />
+    <Compile Include="vue\images\produits\légumes\asperge.jpg" />
+    <Compile Include="vue\images\produits\légumes\aubergine.jpg" />
+    <Compile Include="vue\images\produits\légumes\betterave.jpg" />
+    <Compile Include="vue\images\produits\légumes\blette.jpg" />
+    <Compile Include="vue\images\produits\légumes\carotte.jpg" />
+    <Compile Include="vue\images\produits\légumes\choux.jpg" />
+    <Compile Include="vue\images\produits\légumes\courgette.jpg" />
+    <Compile Include="vue\images\produits\légumes\epinard.jpg" />
+    <Compile Include="vue\images\produits\légumes\haricot.jpg" />
+    <Compile Include="vue\images\produits\légumes\laitue.jpg" />
+    <Compile Include="vue\images\produits\légumes\oignon.jpg" />
+    <Compile Include="vue\images\produits\légumes\piment.jpg" />
+    <Compile Include="vue\images\produits\légumes\poivron.jpg" />
+    <Compile Include="vue\images\produits\légumes\potimarron.jpg" />
+    <Compile Include="vue\images\cartes.jpg" />
+    <Compile Include="vue\images\euro.png" />
+    <Compile Include="vue\images\fax.jpg" />
+    <Compile Include="vue\images\header.jpg" />
+    <Compile Include="vue\images\horloge.png" />
+    <Compile Include="vue\images\information.png" />
+    <Compile Include="vue\images\logo.png" />
+    <Compile Include="vue\images\loupe.png" />
+    <Compile Include="vue\images\mail.jpg" />
+    <Compile Include="vue\images\maison.png" />
+    <Compile Include="vue\images\moins.png" />
+    <Compile Include="vue\images\phone.jpg" />
+    <Compile Include="vue\images\plus.png" />
+    <Compile Include="vue\images\prix.png" />
+    <Compile Include="model\Article.model.php" />
+    <Compile Include="model\Client.php" />
+    <Compile Include="model\Cnx.php" />
+    <Compile Include="model\CnxSingleton.php" />
+    <Compile Include="model\Commandes.php" />
+    <Compile Include="model\Employe.php" />
+    <Compile Include="model\Modele.php" />
+    <Compile Include="model\Personne.php" />
+    <Compile Include="model\Producteur.php" />
+    <Compile Include="model\Statut.php" />
+    <Compile Include="nbproject\private\config.properties" />
+    <Compile Include="nbproject\private\private.properties" />
+    <Compile Include="nbproject\private\private.xml" />
+    <Compile Include="nbproject\project.properties" />
+    <Compile Include="nbproject\project.xml" />
+    <Compile Include="vue\accueil.view.php" />
+    <Compile Include="vue\css\style.css" />
+    <Compile Include="vue\fonctions.php" />
+    <Compile Include="index.php" />
+    <Compile Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controleur" />
+    <Folder Include="vue\images\produits\fruits\" />
+    <Folder Include="vue\images\produits\légumes\" />
+    <Folder Include="vue\images\produits\" />
+    <Folder Include="vue\images\" />
+    <Folder Include="model" />
+    <Folder Include="nbproject\private" />
+    <Folder Include="nbproject" />
+    <Folder Include="vue\css\" />
+    <Folder Include="vue" />
+    <Folder Include="vue\js\" />
+  </ItemGroup>
+</Project>
