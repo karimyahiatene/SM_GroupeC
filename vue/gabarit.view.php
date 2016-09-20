@@ -8,6 +8,7 @@
     </head>
     <body>
         <?php require_once("fonctions.php"); ?>
+        <?php require_once("model/panier.class.php"); ?>
         <?php $pdo = connectToDatabase(); ?>
         <div>
            <header>
@@ -49,7 +50,7 @@
                     );
                     $pdo_select = $pdo->prepare($sql);
                     $pdo_select->execute();
-                    // Construit la liste depuis les données dans la DB
+                    // Construit la liste depuis les donnï¿½es dans la DB
                     while ($items = $pdo_select->fetch())
                     {
                         $menu['items'][$items['codeC']] = $items;
@@ -64,21 +65,22 @@
                 echo '</ul>';
                 ?>
             </nav>
-            <?php /*Inclue la page demandée*/ ?>
+            <?php /*Inclue la page demandï¿½e*/ ?>
             <?= $contenuPage ?>
             <div id ="panier">
+                <?php $ListePanier=new Panier();?>
                 <div id="titre">Panier</div>
                     <div id="bleu">
                         <div id="panierListe">
-                            <p>pommes 5 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>bananes 3 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>pommes 5 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>bananes 3 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>pommes 5 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>bananes 3 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>pommes 5 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>  
-                            <p>bananes 3 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>
-                            <p>pommes 5 à 2.0 <img class="icone" src="vue/images/prix.png"/></p>                                                                                    
+                            <?php
+                             $ArrayPanier=$ListePanier->getPanier();
+                             if (!empty($ArrayPanier)){
+                             foreach ($ArrayPanier as $ligne)
+                                 ?><p><?php echo $ligne["libelleA"] ?> <?php echo $ligne["quantite"] ?> Ã  <?php echo $ligne["prixhtA"] ?> <img class="icone" src="vue/images/prix.png"/></p>;
+                            <?php } ?>
+                                 
+                            
+                                                                                                           
                         </div>
                         <div id="trait"></div>
                         <p>Total = 16.0 <img class="icone" src="vue/images/prix.png"/></p>
@@ -96,7 +98,7 @@
             </div>
             <div class="horaires">
                 <img class="carre" src="vue/images/horloge.png"/>
-                <p>Nos magasins sont ouverts toute la semaine de 8h00 à 20h00 non stop !</p>
+                <p>Nos magasins sont ouverts toute la semaine de 8h00 ï¿½ 20h00 non stop !</p>
             </div>
             <div class="coordonees">
                 <img class="carre" src="vue/images/maison.png"/>

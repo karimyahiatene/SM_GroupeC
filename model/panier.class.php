@@ -28,7 +28,7 @@ class Panier{
                 $this->liste[$donnee['codeA']] = $donnee;
         }
     $this->nombreArticles += 1; 
-    }
+        }
 
     public function del_panier($codeArticle){
         if (!empty ($this->liste)){

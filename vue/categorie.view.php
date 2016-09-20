@@ -9,7 +9,7 @@
                         <img class="icon" src="vue/images/information.png"/>
                         <p class="prix"><?php echo $article['prixhtA'] ?></p>
                         <img class="icon" src="vue/images/prix.png"/>
-                        <a href="#"><img class="icon" src="vue/images/moins.png"/><a/>
+                        <a href="#"><img class="icon" src="vue/images/moins.png"/></a>
                         <a href="#"><img class="icon" src="vue/images/plus.png"/></a>
                     </div>
                 </div> 
