@@ -33,7 +33,7 @@ class Panier{
 
     public function del_panier($codeArticle){
         if (!empty ($this->liste)){
-			$this->prixTotal = $this->liste[$codeArticle]['prixhtA'];
+			$this->prixTotal -= $this->liste[$codeArticle]['prixhtA'];
             $this->liste[$codeArticle]['quantite'] -= 1;
             if ($this->liste[$codeArticle]['quantite'] == 0)
                 unset($this->liste[$codeArticle]);
