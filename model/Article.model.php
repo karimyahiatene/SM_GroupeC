@@ -2,23 +2,14 @@
 require_once ("vue/fonctions.php");
 class Article {
     
-    public function getArticles($id='all')
+    public function getArticle($codeA, $pdo)
     {
-        $s="SELECT * FROM tb_article";
+        $sql="SELECT * FROM tb_article WHERE codeA = :codeArticle";
+        $pdo_select = $pdo->prepare($sql);
+        $pdo_select->bindValue(':codeArticle', $codeA);
+        $pdo_select->execute();
 
-        if(is_int($id)){
-
-        $s .="WHERE id = :id";
-                }
-        $r=$this->cnx->prepare($s);
-        if(is_int($id)){
-            
-        $r->bindValue('codeA',$id,PDO::PARAM_INT);
-
-        }
-        $r->execute();
-        $resultat=$r->fetchAll(PDO::FETCH_OBJ);
-        return $resultat;
+        return $pdo_select->fetch();
     }
  
     static private function getNumberArticleFromCategorie($categorie, $pdo)
