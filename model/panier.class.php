@@ -27,14 +27,11 @@ class Panier{
                 $donnee['quantite'] = 1;
                 $this->liste[$donnee['codeA']] = $donnee;
         }
-<<<<<<< HEAD
     $this->nombreArticles += 1; 
         }
-=======
 	$this->prixTotal += $donnee['prixhtA'];
     $this->nombreArticles += 1;
     }
->>>>>>> e7ac61c7ea1f8f1362704d26e3ac269f124b31ee
 
     public function del_panier($codeArticle){
         if (!empty ($this->liste)){
