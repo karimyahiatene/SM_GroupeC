@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : Admin
 */
 
+h1, h2, h3{
+    text-align:center;
+}
+
 header{
     background-image: url("../images/header.jpg");
     background-size: cover;
