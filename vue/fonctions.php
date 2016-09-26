@@ -1,4 +1,7 @@
 <?php
+require_once("model/panier.class.php");
+
+
 function connectToDatabase(){
     try
       {

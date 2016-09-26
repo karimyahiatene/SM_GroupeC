@@ -1,5 +1,4 @@
 <?php $titrePage = 'Categorie'; ?>
-
 <?php ob_start(); ?>
 <div id="cadreProduits">
     <?php 
@@ -15,8 +14,20 @@
                         <img class="icon" src="vue/images/information.png"/>
                         <p class="prix"><?php echo $article['prixhtA'] ?></p>
                         <img class="icon" src="vue/images/prix.png"/>
-                        <a href="#"><img class="icon" src="vue/images/moins.png"/></a>
-                        <a href="#"><img class="icon" src="vue/images/plus.png"/></a>
+                        <a href="<?php 
+                                 $params = array_merge($_GET, array("del" => $article['codeA']));
+                                 if(isset($_GET['add']))
+                                     unset($params['add']);
+                                 $new_query_string = http_build_query($params);
+                                 echo "index.php?".$new_query_string;
+                                 ?>"><img class="icon" src="vue/images/moins.png"/></a>
+                        <a href="<?php
+                                 $params = array_merge($_GET, array("add" => $article['codeA']));
+                                 if(isset($_GET['del']))
+                                     unset($params['del']);
+                                 $new_query_string = http_build_query($params);
+                                 echo "index.php?".$new_query_string;
+                                 ?>"><img class="icon" src="vue/images/plus.png"/></a>
                     </div>
                 </div> 
 <?php endforeach; ?>

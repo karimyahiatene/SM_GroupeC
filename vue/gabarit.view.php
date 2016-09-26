@@ -68,7 +68,7 @@
             <?php /*Inclue la page demand�e*/ ?>
             <?= $contenuPage ?>
             <div id ="panier">
-                <?php $ListePanier=new Panier();?>
+                <?php $ListePanier = new Panier();?>
                 <div id="titre">Panier</div>
                     <div id="bleu">
                         <div id="panierListe">
