@@ -2,6 +2,12 @@
 
 <?php ob_start(); ?>
 <div id="cadreProduits">
+    <?php 
+    if (!empty($articles))
+        echo '<h3>'.$articles[0]['libelleC'].'</h3>';
+    else
+        echo '<h2>Aucun produits</h2>';
+    ?>
     <?php foreach ($articles as $article): ?>
                 <div class="cadreProduit">
                     <img class="photo" src="<?php echo $article['photoA'] ?> "/>

@@ -17,7 +17,6 @@ else
     $pageActuelle = 1;
 
 $articles = Article::getArticlesFromCategorie($_GET['categorie'], $pageActuelle ,$pdo);
-
 // On affiche la page
 include_once('vue/categorie.view.php');
 ?>
