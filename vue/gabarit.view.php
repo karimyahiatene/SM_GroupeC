@@ -98,7 +98,7 @@
             </div>
             <div class="horaires">
                 <img class="carre" src="vue/images/horloge.png"/>
-                <p>Nos magasins sont ouverts toute la semaine de 8h00 � 20h00 non stop !</p>
+                <p>Nos magasins sont ouverts toute la semaine de 8h00 à 20h00 non stop !</p>
             </div>
             <div class="coordonees">
                 <img class="carre" src="vue/images/maison.png"/>
