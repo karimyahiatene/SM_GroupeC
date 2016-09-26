@@ -18,8 +18,10 @@
   <ItemGroup>
     <Compile Include="controleur\accueil.controler.php" />
     <Compile Include="controleur\categorie.controler.php" />
+    <Compile Include="controleur\erreur.controler.php" />
     <Compile Include="model\Panier.class.php" />
     <Compile Include="vue\categorie.view.php" />
+    <Compile Include="vue\erreur.view.php" />
     <Compile Include="vue\gabarit.view.php" />
     <Compile Include="vue\images\produits\fruits\ananas.jpg" />
     <Compile Include="vue\images\produits\fruits\banane.jpg" />
@@ -69,7 +71,6 @@
     <Compile Include="model\Article.model.php" />
     <Compile Include="model\Client.php" />
     <Compile Include="model\Cnx.php" />
-    <Compile Include="model\CnxSingleton.php" />
     <Compile Include="model\Commandes.php" />
     <Compile Include="model\Employe.php" />
     <Compile Include="model\Modele.php" />
