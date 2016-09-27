@@ -316,3 +316,13 @@ footer{
     height: 120px;
     width: 250px;
 }
+
+#formLogin{
+    border-width: 1px;
+    border-style: solid;
+    width: 30%;
+    text-align:center;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+}

@@ -29,7 +29,7 @@
                         <li><?php if(isset($_SESSION['pseudo']))
                                       echo "<a href=''>Déconexion</a>";
                                   else
-                                      echo "<a href=''>Connexion</a>";
+                                      echo "<a href='index.php?page=login'>Connexion</a>";
                             ?></li>
                         <li id="different">Bonjour 
                         <?php if(isset($_SESSION['pseudo']))

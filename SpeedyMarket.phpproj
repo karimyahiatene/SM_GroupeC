@@ -88,6 +88,7 @@
     <Compile Include="index.php" />
     <Compile Include="README.md" />
     <Compile Include="vue\js\list_search.php" />
+    <Compile Include="vue\login.view.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controleur" />
@@ -103,6 +104,7 @@
     <Folder Include="vue\js\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="controleur\login.controler.php" />
     <Content Include="vue\css\autocomplete.css" />
     <Content Include="vue\js\scripts.js" />
   </ItemGroup>

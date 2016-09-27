@@ -34,6 +34,10 @@ else if ($_GET['page'] == 'produit')
 {
     include_once('controleur/ficheproduit.controler.php');
 }
+else if ($_GET['page'] == 'login')
+{
+    include_once('controleur/login.controler.php');
+}
 else
 {
     include_once('controleur/erreur.controler.php');
