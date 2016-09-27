@@ -8,7 +8,7 @@ if(isset($_SESSION['panier']))
     $ListePanier = new Panier($_SESSION['panier'], $_SESSION['totalPanier']);
 else
     $ListePanier = new Panier(array(), 0);
-$_SESSION['totalPanier'] = 0;
+//$_SESSION['totalPanier'] = 0;
 
 if (isset($_GET['add'])) {
     $ListePanier->add_panier($_GET['add']);
