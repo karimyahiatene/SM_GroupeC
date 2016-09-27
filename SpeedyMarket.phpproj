@@ -87,6 +87,7 @@
     <Compile Include="vue\fonctions.php" />
     <Compile Include="index.php" />
     <Compile Include="README.md" />
+    <Compile Include="vue\js\list_search.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controleur" />
@@ -100,5 +101,9 @@
     <Folder Include="vue\css\" />
     <Folder Include="vue" />
     <Folder Include="vue\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vue\css\autocomplete.css" />
+    <Content Include="vue\js\scripts.js" />
   </ItemGroup>
 </Project>

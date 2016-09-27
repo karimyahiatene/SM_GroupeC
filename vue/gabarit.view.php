@@ -5,6 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="vue/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="vue/css/autocomplete.css" rel="stylesheet" type="text/css" />
+        <script src="vue/js/jquery.js" type="text/javascript"></script>
+        <script src="vue/js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="vue/js/scripts.js" type="text/javascript"></script>
     </head>
     <body>
         <?php require_once("fonctions.php"); ?>
@@ -14,8 +18,8 @@
                 <img id="logo" src="vue/images/logo.png" title="logo speedy market" alt="logo speedy market"/>
                
                         <form action="" class="formulaire">
-                            <input class="champ" type="text" value=""/>
-                            <input class="bouton" type="button" value=" "/>
+                            <input id="recherche" class="champ" type="text" />
+                            <input class="bouton" type="button" />
                         </form>
                 
                 <nav id="nav_header">
