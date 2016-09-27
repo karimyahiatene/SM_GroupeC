@@ -26,8 +26,18 @@
                     <ul class="liste">
                         <li>Bonus</li>
                         <li>Historique</li>
-                        <li>Deconnexion</li>
-                        <li id="different">Bonjour M Toto</li>
+                        <li><?php if(isset($_SESSION['pseudo']))
+                                      echo "<a href=''>Déconexion</a>";
+                                  else
+                                      echo "<a href=''>Connexion</a>";
+                            ?></li>
+                        <li id="different">Bonjour 
+                        <?php if(isset($_SESSION['pseudo']))
+                                  echo "<a href=''>M. ".$_SESSION['pseudo']."</a>";
+                              else
+                                  echo "Invité";
+                        ?>
+                        </li>
                     </ul>
                 </nav>    
             </header>
