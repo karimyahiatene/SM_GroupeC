@@ -8,8 +8,7 @@
     </head>
     <body>
         <?php require_once("fonctions.php"); ?>
-        <?php require_once("model/panier.class.php"); ?>
-        <?php $pdo = connectToDatabase(); ?>
+        <?php require_once("model/panier.class.php");?>
         <div>
            <header>
                 <img id="logo" src="vue/images/logo.png" title="logo speedy market" alt="logo speedy market"/>
@@ -68,22 +67,22 @@
             <?php /*Inclue la page demand�e*/ ?>
             <?= $contenuPage ?>
             <div id ="panier">
-                <?php $ListePanier = new Panier();?>
                 <div id="titre">Panier</div>
                     <div id="bleu">
                         <div id="panierListe">
                             <?php
-                             $ArrayPanier=$ListePanier->getPanier();
-                             if (!empty($ArrayPanier)){
-                             foreach ($ArrayPanier as $ligne)
-                                 ?><p><?php echo $ligne["libelleA"] ?> <?php echo $ligne["quantite"] ?> à <?php echo $ligne["prixhtA"] ?> <img class="icone" src="vue/images/prix.png"/></p>;
-                            <?php } ?>
+                             if (!empty($ListePanier->getPanier())){
+                                 foreach ($ListePanier->getPanier() as $ligne){
+                                 ?><p><?php echo $ligne["libelleA"] ?> <?php echo $ligne["quantite"] ?> à <?php echo $ligne["prixhtA"] ?> <img class="icone" src="vue/images/prix.png"/></p>
+                            <?php 
+                                 }
+                             } ?>
                                  
                             
                                                                                                            
                         </div>
                         <div id="trait"></div>
-                        <p>Total = 16.0 <img class="icone" src="vue/images/prix.png"/></p>
+                        <p>Total = <?php echo $ListePanier->getTotal(); ?> <img class="icone" src="vue/images/prix.png"/></p>
                     </div>
                 </div>
             </div>
@@ -111,5 +110,6 @@
                 <img class="banque" src="vue/images/cartes.jpg"/>
             </div>
         </footer>
+
     </body>
 </html>

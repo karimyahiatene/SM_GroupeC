@@ -1,5 +1,26 @@
 <?php
+require_once("model/panier.class.php");
 
+session_start();
+$pdo = connectToDatabase();
+
+if(isset($_SESSION['panier']))
+    $ListePanier = new Panier($_SESSION['panier'], $_SESSION['totalPanier']);
+else
+    $ListePanier = new Panier(array(), 0);
+$_SESSION['totalPanier'] = 0;
+
+if (isset($_GET['add'])) {
+    $ListePanier->add_panier($_GET['add']);
+    $_SESSION['panier'] = $ListePanier->getPanier();
+    $_SESSION['totalPanier'] = $ListePanier->getTotal();
+}
+
+if (isset($_GET['del'])) {
+    $ListePanier->del_panier($_GET['del']);
+    $_SESSION['panier'] = $ListePanier->getPanier();
+    $_SESSION['totalPanier'] = $ListePanier->getTotal();
+}
 
 if (!isset($_GET['page']) OR $_GET['page'] == 'accueil')
 {
@@ -17,4 +38,5 @@ else
 {
     include_once('controleur/erreur.controler.php');
 }
+
 ?>

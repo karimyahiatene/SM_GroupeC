@@ -5,6 +5,11 @@ class Panier{
     private $nombreArticles = 0;
     private $prixTotal = 0.00;
 
+    public function __construct($liste, $total){
+        $this->liste = $liste;
+        $this->prixTotal = $total;
+    }
+
     public function add_panier($codeArticle){
         global $pdo;
         $sql = "SELECT * FROM tb_article WHERE codeA = :codeArticle";
@@ -29,13 +34,15 @@ class Panier{
     }
 
     public function del_panier($codeArticle){
-        if (!empty ($this->liste)){
-			$this->prixTotal -= $this->liste[$codeArticle]['prixhtA'];
-            $this->liste[$codeArticle]['quantite'] -= 1;
-            if ($this->liste[$codeArticle]['quantite'] == 0)
-                unset($this->liste[$codeArticle]);
-        }
-		$this->nombreArticles -= 1;
+        if (!empty ($this->liste))
+            if (array_key_exists($codeArticle, $this->liste))
+            {
+			    $this->prixTotal -= $this->liste[$codeArticle]['prixhtA'];
+                $this->liste[$codeArticle]['quantite'] -= 1;
+                if ($this->liste[$codeArticle]['quantite'] == 0)
+                    unset($this->liste[$codeArticle]);
+                $this->nombreArticles -= 1;
+            }
     }
 
     public function getPanier(){
