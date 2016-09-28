@@ -9,6 +9,8 @@
         <script src="vue/js/jquery.js" type="text/javascript"></script>
         <script src="vue/js/jquery-ui.min.js" type="text/javascript"></script>
         <script src="vue/js/scripts.js" type="text/javascript"></script>
+        <script src="vue/js/Panier.js" type="text/javascript"></script>
+    
     </head>
     <body>
         <?php require_once("fonctions.php"); ?>

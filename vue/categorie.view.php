@@ -20,14 +20,14 @@
                                      unset($params['add']);
                                  $new_query_string = http_build_query($params);
                                  echo "index.php?".$new_query_string;
-                                 ?>"><img class="icon" src="vue/images/moins.png"/></a>
+                                 ?>" class="modifPanier"><img class="icon" src="vue/images/moins.png"/></a>
                         <a href="<?php
                                  $params = array_merge($_GET, array("add" => $article['codeA']));
                                  if(isset($_GET['del']))
                                      unset($params['del']);
                                  $new_query_string = http_build_query($params);
                                  echo "index.php?".$new_query_string;
-                                 ?>"><img class="icon" src="vue/images/plus.png"/></a>
+                                 ?>" class="modifPanier"><img class="icon" src="vue/images/plus.png"/></a>
                     </div>
                 </div> 
 <?php endforeach; ?>
