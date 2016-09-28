@@ -326,3 +326,84 @@ footer{
     margin: auto;
     border-radius: 10px;
 }
+.rectangulitod{
+    background-color: #336666;
+    border-radius: 20px;
+    width : 20%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 29%;
+}
+.rectangulitod h4{
+    display: block;
+    float: left;
+    margin-left: 40%;
+}
+.rectangulitog{
+    background-color: #336666;
+    border-radius: 20px;
+    width : 20%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 29%;
+}
+.rectangulitog h4{
+    display: block;
+    float: left;
+    margin-left: 40%;
+}
+.icones{
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: relative;
+    top: 15px;
+}
+.iconeg{
+    width: 25px;
+    height: 25px;
+    position:relative;
+    left: -50px;
+    top: 15px;
+}
+.iconed{
+    width: 25px;
+    height: 25px;
+    position:relative;
+   left: 10px;
+   top: 15px;
+}
+.fleched{
+    float: left;
+    position: relative;
+    top: 150px;
+}
+.flecheg{
+    float:left;
+    position: relative;
+    top: 150px;
+}
+.ficheproduit{
+    border-color: #666666;
+    border-style: solid;
+    border-radius: 20px;
+    
+    width: 40%;
+    float: left;
+    padding: 1%;
+}
+.floot{
+    float: left;
+}
+.floot h2{
+    color: #336666;
+    font-family: arial;
+}
+.fruta{
+    position: relative;
+    left: 30%;
+}
+.renseigne{
+    clear: left;
+
+}

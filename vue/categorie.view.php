@@ -11,7 +11,7 @@
                 <div class="cadreProduit">
                     <img class="photo" src="<?php echo $article['photoA'] ?> "/>
                     <div class="rectangle">
-                        <img class="icon" src="vue/images/information.png"/>
+                        <a href="?page=produit&cat=<?php echo $articles[0]['codeC'] ?>&id=<?php echo $article['codeA']?>"><img class="icon" src="vue/images/information.png"/></a>
                         <p class="prix"><?php echo $article['prixhtA'] ?></p>
                         <img class="icon" src="vue/images/prix.png"/>
                         <a href="<?php 

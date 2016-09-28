@@ -2,7 +2,7 @@
 require_once ("vue/fonctions.php");
 class Article {
 
-    public function getArticle($codeA, $pdo)
+    static public function getArticle($codeA, $pdo)
     {
         $sql="SELECT * FROM tb_article WHERE codeA = :codeArticle";
         $pdo_select = $pdo->prepare($sql);
@@ -51,5 +51,14 @@ class Article {
         $pdo_select->execute();
         return $pdo_select->fetchAll();
         //return json_encode($pdo_select);
+    }
+	
+	static public function getArticlesFromCategorieFiche($categorie, $pdo)
+    {
+        $sql = "SELECT * FROM appartenir, tb_article, tb_categorie WHERE tb_article.codeA = appartenir.codeA AND appartenir.codeC = tb_categorie.codeC AND appartenir.codeC = :categorie";
+        $pdo_select = $pdo->prepare($sql);
+        $pdo_select->bindValue(':categorie', $categorie);
+        $pdo_select->execute();
+        return $pdo_select->fetchAll();
     }
 }
